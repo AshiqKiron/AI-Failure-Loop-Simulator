@@ -2,7 +2,7 @@
 
 **Operationalizing the Data Flywheel: Collect, Triage, Correct, Retrain.**
 
-👉 **[Launch Interactive Live Demo](https://[your-username].github.io/ai-failure-loop-simulator/)**
+👉 **[Live Demo](https://[your-username].github.io/ai-failure-loop-simulator/)**
 
 ## 🎯 Why This Project?
 
@@ -119,7 +119,5 @@ This simulator represents V1 of the product vision. If this project were moved i
 4. **Cost Allocation Dashboard:** Build a multi-tenant billing view that charges internal business units for the *actual compute cost* of the failures their specific prompts are generating.
 
 ---
-
-**Built by [Ashiquzzaman Kiron]** 
 
 
