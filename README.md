@@ -26,6 +26,25 @@ This simulator demonstrates a productized failure loop that routes errors based 
 
 The system is designed as a closed-loop pipeline. It intercepts failure signals, classifies them, and routes them to the appropriate MLOps workflow.
 
+```mermaid
+graph TD
+    A[User Interaction / Telemetry] -->|Bad Output Detected| B(Failure Collection Engine)
+    B -->|Raw Error Payload| C{Triage & Routing Engine}
+    
+    C -->|Tone/Format Error| D[Prompt Engineering Fix]
+    C -->|Hallucination/Knowledge Gap| E[RAG / Vector DB Update]
+    C -->|Deep Logic/Reasoning Flaw| F[Human Annotation & Retrain]
+    
+    D -->|Shadow Test| G(Evaluation Gate)
+    E -->|Shadow Test| G
+    F -->|Fine-tuning| G
+    
+    G -->|Pass| H[Production Deployment]
+    G -->|Fail| I[Fallback to Human Review]
+    
+    H --> J[Metrics & Flywheel Dashboard]
+```
+
 ### High-Level Flow
 1. **Telemetry Ingestion:** User clicks "Thumbs Down" or system detects implicit failure (e.g., user rewrites the text).
 2. **Classification Layer:** A lightweight classifier (or LLM-as-a-judge) categorizes the failure (Hallucination, Tone, Logic, etc.).
