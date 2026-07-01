@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Failure Loop Simulator | Product Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header>
+        <h1>AI Failure Loop Simulator</h1>
+        <p class="subtitle">Operationalizing the Data Flywheel: Collect, Triage, Correct, Retrain</p>
+        <button id="auto-simulate-btn" class="btn-primary">▶ Run Flywheel Simulation</button>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- LEFT PANEL: Collection -->
+        <section class="panel collection-panel">
+            <h2>1. Failure Collection</h2>
+            <div class="chat-interface">
+                <div id="chat-window" class="chat-window">
+                    <!-- Messages injected here -->
+                </div>
+                <div class="chat-controls">
+                    <button id="gen-response-btn" class="btn-secondary">Generate AI Response</button>
+                </div>
+            </div>
+            <div class="queue-summary">
+                <span>Untriaged Failures: </span>
+                <span id="queue-count" class="metric-highlight">0</span>
+            </div>
+        </section>
+
+        <!-- MIDDLE PANEL: Triage -->
+        <section class="panel triage-panel">
+            <h2>2. Triage & Routing Engine</h2>
+            <div id="triage-queue" class="triage-queue">
+                <p class="empty-state">Failures will appear here for routing...</p>
+            </div>
+            <div class="routing-legend">
+                <div class="legend-item"><span class="dot prompt"></span> Prompt Fix (Low Cost)</div>
+                <div class="legend-item"><span class="dot rag"></span> RAG Update (Med Cost)</div>
+                <div class="legend-item"><span class="dot retrain"></span> Retrain (High Cost)</div>
+            </div>
+        </section>
+
+        <!-- RIGHT PANEL: Metrics -->
+        <section class="panel metrics-panel">
+            <h2>3. Flywheel ROI & Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Total Collected</h3>
+                    <p id="metric-collected" class="metric-value">0</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Avg Cost per Fix</h3>
+                    <p id="metric-avg-cost" class="metric-value">$0</p>
+                    <span class="metric-delta" id="metric-cost-savings">vs $500 baseline</span>
+                </div>
+                <div class="metric-card">
+                    <h3>TCO Savings</h3>
+                    <p id="metric-tco-savings" class="metric-value positive">$0</p>
+                    <span class="metric-subtext">Saved by smart routing</span>
+                </div>
+                <div class="metric-card">
+                    <h3>Flywheel Velocity</h3>
+                    <p id="metric-velocity" class="metric-value">0%</p>
+                    <span class="metric-subtext">Auto-resolved vs Manual</span>
+                </div>
+            </div>
+            <div class="cost-breakdown">
+                <h3>Correction Distribution</h3>
+                <div class="bar-chart">
+                    <div class="bar-container">
+                        <div id="bar-prompt" class="bar prompt" style="width: 0%"></div>
+                        <span class="bar-label">Prompt</span>
+                    </div>
+                    <div class="bar-container">
+                        <div id="bar-rag" class="bar rag" style="width: 0%"></div>
+                        <span class="bar-label">RAG</span>
+                    </div>
+                    <div class="bar-container">
+                        <div id="bar-retrain" class="bar retrain" style="width: 0%"></div>
+                        <span class="bar-label">Retrain</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built for AI Product Management Portfolio | <a href="docs/PRD.md" target="_blank">View PRD</a> | <a href="docs/architecture.md" target="_blank">View Architecture</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/feedback-collector.js"></script>
+    <script src="js/triage-engine.js"></script>
+    <script src="js/metrics-dashboard.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

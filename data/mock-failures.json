@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fail_001",
+    "user_prompt": "What is the capital of Australia?",
+    "ai_response": "The capital of Australia is Sydney.",
+    "failure_type": "hallucination",
+    "severity": "high",
+    "user_feedback": "Wrong, it's Canberra."
+  },
+  {
+    "id": "fail_002",
+    "user_prompt": "Write a polite email declining a meeting.",
+    "ai_response": "NO. I WILL NOT ATTEND YOUR MEETING.",
+    "failure_type": "tone_violation",
+    "severity": "medium",
+    "user_feedback": "Too aggressive, needs to be professional."
+  },
+  {
+    "id": "fail_003",
+    "user_prompt": "Summarize the Q3 financial report.",
+    "ai_response": "Revenue was up. Costs were down. Good job team.",
+    "failure_type": "formatting_error",
+    "severity": "low",
+    "user_feedback": "Needs to be in bullet points with exact figures."
+  },
+  {
+    "id": "fail_004",
+    "user_prompt": "Explain how to configure a Cisco router.",
+    "ai_response": "To configure a router, plug it in and turn it on.",
+    "failure_type": "knowledge_gap",
+    "severity": "high",
+    "user_feedback": "Too basic. Missing CLI commands and specific steps."
+  },
+  {
+    "id": "fail_005",
+    "user_prompt": "Calculate the compound interest for $1000 at 5% for 3 years.",
+    "ai_response": "The interest is $150.",
+    "failure_type": "logic_error",
+    "severity": "high",
+    "user_feedback": "Incorrect math. It should be $157.63."
+  }
+]

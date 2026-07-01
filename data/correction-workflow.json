@@ -1,0 +1,41 @@
+{
+  "routing_rules": [
+    {
+      "failure_type": "tone_violation",
+      "action": "prompt_engineering",
+      "estimated_cost": 5,
+      "time_to_fix_hours": 2,
+      "description": "Update system prompt to enforce professional tone."
+    },
+    {
+      "failure_type": "formatting_error",
+      "action": "prompt_engineering",
+      "estimated_cost": 5,
+      "time_to_fix_hours": 1,
+      "description": "Add explicit formatting instructions to the prompt."
+    },
+    {
+      "failure_type": "hallucination",
+      "action": "rag_update",
+      "estimated_cost": 50,
+      "time_to_fix_hours": 12,
+      "description": "Ingest correct factual data into the Vector DB."
+    },
+    {
+      "failure_type": "knowledge_gap",
+      "action": "rag_update",
+      "estimated_cost": 75,
+      "time_to_fix_hours": 24,
+      "description": "Add missing technical documentation to the knowledge base."
+    },
+    {
+      "failure_type": "logic_error",
+      "action": "model_retrain",
+      "estimated_cost": 500,
+      "time_to_fix_hours": 72,
+      "description": "Generate synthetic math data and fine-tune the base model."
+    }
+  ],
+  "baseline_retrain_cost": 500,
+  "baseline_retrain_time": 72
+}
