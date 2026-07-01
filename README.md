@@ -85,7 +85,7 @@ By routing errors intelligently, we avoid the "$500 baseline retrain" for every 
 
 ### The Demo Stack (Frontend Simulator)
 *   **HTML5 / CSS3 / Vanilla JavaScript (ES6)**
-*   *Why?* **Zero friction, zero build steps.** I wanted hiring managers to click a link and instantly see the product logic without waiting for a Vercel build or dealing with React dependency hell. It proves I can build functional, interactive prototypes rapidly.
+*   *Why?* **Zero friction, zero build steps.** I want anyone to click a link and instantly see the product logic without waiting for a Vercel build or dealing with React dependency hell. 
 
 ### The Production Stack (Conceptual Backend)
 If I were to build the actual backend for this engine tomorrow, here is the stack I would specify for the engineering team:
@@ -117,12 +117,6 @@ This simulator represents V1 of the product vision. If this project were moved i
 2. **Automated Shadow Testing:** When a Prompt or RAG fix is generated, automatically run it against a "Golden Dataset" of 1,000 historical prompts in a shadow environment. Only promote to production if the pass rate is > 98%.
 3. **Context-Aware Triage:** Upgrade the Triage Engine to look at the *user's persona*. A formatting error from an Enterprise Admin might be routed to a high-priority human queue, while the same error from a free-tier user is auto-fixed via prompt.
 4. **Cost Allocation Dashboard:** Build a multi-tenant billing view that charges internal business units for the *actual compute cost* of the failures their specific prompts are generating.
-
-## 💡 How to Present This in an Interview
-
-If you are walking a hiring manager through this project, use this narrative:
-
-> *"Most AI PMs focus entirely on the model's accuracy during training. But in production, accuracy degrades, and the real product challenge is **how efficiently you can fix it**. I built this simulator to prove that operating the failure loop is an exercise in routing economics. By productizing the triage engine to route 85% of failures to cheap Prompt or RAG fixes, we drastically reduce the TCO of the AI product, cut time-to-resolution from weeks to minutes, and ensure our expensive ML engineers are only spending GPU compute on deep reasoning flaws."*
 
 ---
 
