@@ -4,6 +4,10 @@
 
 👉 **[Live Demo](https://[your-username].github.io/ai-failure-loop-simulator/)**
 
+
+### Webpage screenshot ![](ss.png)
+
+
 ## 🎯 Why This Project?
 
 In the current AI landscape, the bottleneck has shifted from **model training** to **inference operations and continuous improvement**. Most AI teams treat model deployment as the finish line. In reality, it is the starting line. 
